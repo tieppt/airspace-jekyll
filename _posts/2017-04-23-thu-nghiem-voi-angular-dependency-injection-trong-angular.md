@@ -66,7 +66,8 @@ Chúng ta sẽ có 2 cách để khởi tạo như sau:
   1. Khởi tạo instance của class CPU trong class Computer và gán cho property cpu, trong trường hợp của JavaScript, TypeScript là khởi tạo trong hàm tạo.
   2. Khởi tạo instance của class CPU ở một context (container) bên ngoài, và truyền vào (inject) cho class Computer, trong trường hợp của JavaScript, TypeScript là truyền qua constructor của class Computer.
 
-![Khởi tạo instance của class CPU](/assets/uploads/2017/04/DI.png)
+![Khởi tạo instance của class CPU](/assets/uploads/2017/04/DI.png){:class="img-responsive"}
+{:class="text-center"}
 
 Đối với cách 1, chúng ta đã hard-coded khi khởi tạo như sau:
 
@@ -177,7 +178,7 @@ DI trong Angular bao gồm 3 thành phần sau đây:
 
 **Dependency**: là một object của một kiểu dữ liệu cần phải khởi tạo.
 
-![Dependency Injection Trong Angular](/assets/uploads/2017/04/DI-angular.png)
+![Dependency Injection Trong Angular](/assets/uploads/2017/04/DI-angular.png){:class="img-responsive"}
 
 Chúng ta đã sử dụng **ReflectiveInjector** để lấy được object của class Computer – đó  chính là **Injector** – thông qua method **resolveAndCreate**.
 
@@ -531,7 +532,7 @@ export class CollapseComponent implements OnInit {
 }
 ```
 
-![Component Dependency Injection](/assets/uploads/2017/04/component-di.png)
+![Component Dependency Injection](/assets/uploads/2017/04/component-di.png){:class="img-responsive"}
 
 ## 6. Services {#tp-di-services-la-gi}
 
