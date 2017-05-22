@@ -400,7 +400,7 @@ Như vậy, việc sử dụng Template-driven form trong Angular khá dễ dàn
 ## 7. Video bài học
 
 <figure class="video_container">
-  <iframe src="https://www.youtube.com/embed/fn3oucje1Xg" frameborder="0" allowfullscreen="true"> </iframe>
+  <iframe src="https://www.youtube.com/embed/fn3oucje1Xg" frameborder="0" allowfullscreen="true" width="100%" height="480"> </iframe>
 </figure>
 
 ## 8. Tham khảo
