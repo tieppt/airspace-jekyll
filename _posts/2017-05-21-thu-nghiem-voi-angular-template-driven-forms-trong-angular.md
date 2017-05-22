@@ -6,8 +6,7 @@ author: Tiep Phan
 layout: post
 guid: http://www.tiepphan.com/?p=437
 permalink: /thu-nghiem-voi-angular-template-driven-forms-trong-angular/
-beans_layout:
-  - default_fallback
+description: 'Template-driven forms là phương pháp mà chúng ta sẽ tạo forms dựa vào template. Chúng ta thực hiện việc thêm các directives và hành vi vào template.'
 image: /wp-content/uploads/2017/05/angular-p17.jpg
 categories:
   - Javascript
