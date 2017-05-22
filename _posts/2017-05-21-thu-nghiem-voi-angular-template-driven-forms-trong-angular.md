@@ -121,14 +121,16 @@ Angular cung cấp một giải pháp để có thể truy cập được direct
   
 Giờ đây chúng ta có thể sử dụng form value cho việc submit form chẳng hạn.
 
+{% raw %}
 ```html
 <form novalidate #form="ngForm"
   (submit)="onSubmit(form.value)" ...>
 </form>
  
 <p>Form value:</p>
-<pre>\{{ form.value | json }}</pre>
+<pre>{{ form.value | json }}</pre>
 ```
+{% endraw %}
 
 Và để dễ dàng trong quá trình development, chúng ta có thể thêm một phần hiển thị ở template để biết được form value đang có gì như hai dòng code cuối ở trên.
 
@@ -323,10 +325,12 @@ Giả sử chúng ta cần cài đặt contactName là required, chúng ta sẽ 
 
 Và để dễ dàng quan sát, chúng ta sẽ thêm phần hiển thị lỗi như sau:
 
+{% raw %}
 ```html
 <p>Form contactName errors:</p>
 <pre>{{ form.controls.contactName?.errors | json }}</pre>
 ```
+{% endraw %}
 
 Chúng ta sử dụng **safe navigation operator** để truy cập property của một object có thể bị null/undefined mà không gây ra lỗi chương trình.
 
