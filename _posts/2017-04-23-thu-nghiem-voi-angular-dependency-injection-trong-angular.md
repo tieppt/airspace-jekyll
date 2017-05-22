@@ -66,11 +66,7 @@ Chúng ta sẽ có 2 cách để khởi tạo như sau:
   1. Khởi tạo instance của class CPU trong class Computer và gán cho property cpu, trong trường hợp của JavaScript, TypeScript là khởi tạo trong hàm tạo.
   2. Khởi tạo instance của class CPU ở một context (container) bên ngoài, và truyền vào (inject) cho class Computer, trong trường hợp của JavaScript, TypeScript là truyền qua constructor của class Computer.
 
-
-<figure>
-![Khởi tạo instance của class CPU](http://www.tiepphan.com/assets/uploads/2017/04/DI.png)
-<figcaption>Khởi tạo instance của class CPU</figcaption>
-</figure> 
+![Khởi tạo instance của class CPU](/assets/uploads/2017/04/DI.png)
 
 Đối với cách 1, chúng ta đã hard-coded khi khởi tạo như sau:
 
