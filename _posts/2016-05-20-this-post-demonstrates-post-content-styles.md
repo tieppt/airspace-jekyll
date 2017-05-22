@@ -45,6 +45,22 @@ Vestibulum lacus tortor, ultricies id dignissim ac, bibendum in velit. Proin con
 </html>
 ```
 
+```ts
+export const REQUIRED_VALIDATOR: Provider = {
+  provide: NG_VALIDATORS,
+  useExisting: forwardRef(() => RequiredValidator),
+  multi: true
+};
+ 
+@Directive({
+  selector: '…',
+  providers: [REQUIRED_VALIDATOR],
+  host: {'[attr.required]': 'required ? "" : null'}
+})
+export class RequiredValidator implements Validator {
+}
+```
+
 
 In arcu magna, aliquet vel pretium et, molestie et arcu. Mauris lobortis nulla et felis ullamcorper bibendum. Phasellus et hendrerit mauris.
 
