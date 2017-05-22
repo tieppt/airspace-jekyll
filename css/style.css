@@ -4,17 +4,22 @@
  *
  */
 
- .italic {
-   font-style: italic;
- }
+#global-header .block {
+  position: relative;
+  color: #fff;
+}
 
- .bold {
-   font-weight: bold;
- }
+.italic {
+  font-style: italic;
+}
 
- .center-text {
-   text-align: center;
- }
+.bold {
+  font-weight: bold;
+}
+
+.center-text {
+  text-align: center;
+}
 
 .post-area {
   padding: 40px;
