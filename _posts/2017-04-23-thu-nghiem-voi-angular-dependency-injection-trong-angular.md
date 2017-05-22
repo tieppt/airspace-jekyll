@@ -181,10 +181,7 @@ DI trong Angular bao gồm 3 thành phần sau đây:
 
 **Dependency**: là một object của một kiểu dữ liệu cần phải khởi tạo.
 
-<figure>
-![Dependency Injection Trong Angular](http://www.tiepphan.com/assets/uploads/2017/04/DI-angular.png)
-<figcaption>Dependency Injection Trong Angular</figcaption>
-</figure> 
+![Dependency Injection Trong Angular](/assets/uploads/2017/04/DI-angular.png)
 
 Chúng ta đã sử dụng **ReflectiveInjector** để lấy được object của class Computer – đó  chính là **Injector** – thông qua method **resolveAndCreate**.
 
@@ -538,7 +535,7 @@ export class CollapseComponent implements OnInit {
 }
 ```
 
-![Component Dependency Injection](http://www.tiepphan.com/assets/uploads/2017/04/component-di.png)
+![Component Dependency Injection](/assets/uploads/2017/04/component-di.png)
 
 ## 6. Services {#tp-di-services-la-gi}
 
