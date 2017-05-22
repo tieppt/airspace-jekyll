@@ -20,7 +20,7 @@ tags:
   - Lập Trình Angular 2
 ---
 
-#Template-Driven Forms Trong Angular
+# Template-Driven Forms Trong Angular
 
 
 Hầu hết các ứng dụng web hiện đại đều làm việc với forms để thu thập dữ liệu từ người dùng. Angular cung cấp cho chúng ta hai phương pháp để tạo forms, một là Template-driven forms (mà có thể bạn đã quen thuộc từ Angularjs) và hai là Reactive forms hay Model-driven forms.
@@ -85,7 +85,7 @@ Giả sử chúng ta có template form như sau:
 
 Trên đây chỉ là một form HTML thông thường, khi browser render chúng ta sẽ có form trông giống như sau:
 
-[<img class="aligncenter size-full wp-image-441" src="http://www.tiepphan.com/wp-content/uploads/2017/05/ContactAppForm.png" alt="Contact App Form" width="1376" height="864" srcset="http://www.tiepphan.com/wp-content/uploads/2017/05/ContactAppForm.png 1376w, http://www.tiepphan.com/wp-content/uploads/2017/05/ContactAppForm-300x188.png 300w, http://www.tiepphan.com/wp-content/uploads/2017/05/ContactAppForm-768x482.png 768w, http://www.tiepphan.com/wp-content/uploads/2017/05/ContactAppForm-1024x643.png 1024w" sizes="(max-width: 1376px) 100vw, 1376px" />](http://www.tiepphan.com/wp-content/uploads/2017/05/ContactAppForm.png)
+[!Contact App Form](http://www.tiepphan.com/wp-content/uploads/2017/05/ContactAppForm.png)
 
 ## 2. Import APIs cho Template-driven forms
 
