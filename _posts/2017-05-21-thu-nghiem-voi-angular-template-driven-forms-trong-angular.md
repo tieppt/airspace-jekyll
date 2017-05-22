@@ -19,9 +19,9 @@ tags:
   - Angular Component
   - Lập Trình Angular 2
 ---
-<h1 class="uk-article-title" style="text-align: center;">
-  Template-Driven Forms Trong Angular
-</h1>
+
+#Template-Driven Forms Trong Angular
+
 
 Hầu hết các ứng dụng web hiện đại đều làm việc với forms để thu thập dữ liệu từ người dùng. Angular cung cấp cho chúng ta hai phương pháp để tạo forms, một là Template-driven forms (mà có thể bạn đã quen thuộc từ Angularjs) và hai là Reactive forms hay Model-driven forms.
 
@@ -35,52 +35,53 @@ Template-driven forms là phương pháp mà chúng ta sẽ tạo forms dựa v�
 
 Giả sử chúng ta có template form như sau:
 
-<pre class="brush:html">&lt;form novalidate (submit)="onSubmit()" class="row justify-content-md-center"&gt;
-  &lt;div class="col-md-8"&gt;
-    &lt;div class="form-group row"&gt;
-      &lt;label for="example-text-input" class="col-md-2 col-form-label"&gt;Name:&lt;/label&gt;
-      &lt;div class="col-md-10"&gt;
-        &lt;input class="form-control" type="text" id="example-text-input"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group row"&gt;
-      &lt;label for="example-email-input" class="col-md-2 col-form-label"&gt;Email:&lt;/label&gt;
-      &lt;div class="col-md-10"&gt;
-        &lt;input class="form-control" type="email" id="example-email-input"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group row"&gt;
-      &lt;label for="example-url-fb" class="col-md-2 col-form-label"&gt;Facebook:&lt;/label&gt;
-      &lt;div class="col-md-10"&gt;
-        &lt;input class="form-control" type="url" id="example-url-fb"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group row"&gt;
-      &lt;label for="example-url-twt" class="col-md-2 col-form-label"&gt;Twitter:&lt;/label&gt;
-      &lt;div class="col-md-10"&gt;
-        &lt;input class="form-control" type="url" id="example-url-twt"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group row"&gt;
-      &lt;label for="example-url-web" class="col-md-2 col-form-label"&gt;Website:&lt;/label&gt;
-      &lt;div class="col-md-10"&gt;
-        &lt;input class="form-control" type="url" id="example-url-web"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group row"&gt;
-      &lt;label for="example-tel-input" class="col-md-2 col-form-label"&gt;Tel:&lt;/label&gt;
-      &lt;div class="col-md-10"&gt;
-        &lt;input class="form-control" type="tel" id="example-tel-input"&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-    &lt;div class="form-group row"&gt;
-      &lt;div class="col-md-10 offset-md-2"&gt;
-        &lt;button class="btn btn-primary" type="submit"&gt;Submit&lt;/button&gt;
-      &lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form novalidate (submit)="onSubmit()" class="row justify-content-md-center">
+  <div class="col-md-8">
+    <div class="form-group row">
+      <label for="example-text-input" class="col-md-2 col-form-label">Name:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="text" id="example-text-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-email-input" class="col-md-2 col-form-label">Email:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="email" id="example-email-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-url-fb" class="col-md-2 col-form-label">Facebook:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="url" id="example-url-fb">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-url-twt" class="col-md-2 col-form-label">Twitter:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="url" id="example-url-twt">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-url-web" class="col-md-2 col-form-label">Website:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="url" id="example-url-web">
+      </div>
+    </div>
+    <div class="form-group row">
+      <label for="example-tel-input" class="col-md-2 col-form-label">Tel:</label>
+      <div class="col-md-10">
+        <input class="form-control" type="tel" id="example-tel-input">
+      </div>
+    </div>
+    <div class="form-group row">
+      <div class="col-md-10 offset-md-2">
+        <button class="btn btn-primary" type="submit">Submit</button>
+      </div>
+    </div>
+  </div>
+</form>
+```
 
 Trên đây chỉ là một form HTML thông thường, khi browser render chúng ta sẽ có form trông giống như sau:
 
@@ -90,7 +91,8 @@ Trên đây chỉ là một form HTML thông thường, khi browser render chún
 
 Để có thể sử dụng các APIs mà Angular cung cấp cho việc thao tác với Template-driven forms, chúng ta cần import NgModule là `FormsModule` từ package `@angular/forms` như sau:
 
-<pre class="brush:js">import { FormsModule } from '@angular/forms';
+```ts
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [...],
@@ -102,15 +104,16 @@ Trên đây chỉ là một form HTML thông thường, khi browser render chún
   bootstrap: [...]
 })
 export class AppModule { }
-</pre>
+```
 
 ## 3. ngForm và ngModel directives
 
 Nhiệm vụ đầu tiên chúng ta cần làm là truy cập vào form instance và gán các control vào form. Chúng ta sẽ lần lượt sử dụng `ngForm` và `ngModel` directives như sau:
 
-<pre class="brush:html">&lt;form novalidate #form="ngForm" ...&gt;
-&lt;/form&gt;
-</pre>
+```html
+<form novalidate #form="ngForm" ...>
+</form>
+```
 
 Angular cung cấp một giải pháp để có thể truy cập được directive/component instance ở trong template của component bằng cách sử dụng `exportAs` trong khai báo directive/component metadata.
   
@@ -118,26 +121,28 @@ Angular cung cấp một giải pháp để có thể truy cập được direct
   
 Giờ đây chúng ta có thể sử dụng form value cho việc submit form chẳng hạn.
 
-<pre class="brush:html">&lt;form novalidate #form="ngForm"
-  (submit)="onSubmit(form.value)" ...&gt;
-&lt;/form&gt;
-
-&lt;p&gt;Form value:&lt;/p&gt;
-&lt;pre&gt;{{ form.value | json }}&lt;/pre&gt;
-</pre>
+```html
+<form novalidate #form="ngForm"
+  (submit)="onSubmit(form.value)" ...>
+</form>
+ 
+<p>Form value:</p>
+<pre>{{ form.value | json }}</pre>
+```
 
 Và để dễ dàng trong quá trình development, chúng ta có thể thêm một phần hiển thị ở template để biết được form value đang có gì như hai dòng code cuối ở trên.
 
 Tại thời điểm này, cho dù chúng ta có form control ở template nhưng Angular không thể biết cái nào cần quản lý nên chúng ta chỉ nhận được một object rỗng.
 
-&nbsp;
+
 
 Bây giờ công việc tiếp theo là chúng ta phải nói cho Angular biết các form control nào cần phải quản lý. Đây chính là lúc chúng ta dùng đến `ngModel` directive.
 
 Chúng ta sẽ thêm `ngModel` vào các control như sau:
 
-<pre class="brush:html">&lt;input class="form-control" type="text" ngModel ...&gt;
-</pre>
+```html
+<input class="form-control" type="text" ngModel ...>
+```
 
 Nhưng nếu bạn không khai báo attribute name cho form control, bạn sẽ gặp phải một lỗi giống như sau:
 
@@ -145,68 +150,85 @@ Nhưng nếu bạn không khai báo attribute name cho form control, bạn sẽ 
 
 Kèm với đó là bạn sẽ có các ví dụ để sửa lỗi trên.
 
-&nbsp;
+
 
 OK, chúng ta cần thêm một số config để Angular biết cách tạo ra form control của nó để quản lý. Và chúng ta sẽ thêm attribute `name` cho các form control ở template trên.
 
-<pre class="brush:html">&lt;input class="form-control" type="text" ngModel name="contact-name" ...&gt;</pre>
+```html
+<input class="form-control" type="text" ngModel name="contact-name" ...>
+```
 
 Bây giờ quan sát form value chúng ta sẽ có một object có key `contact-name` chẳng hạn:
 
-<pre class="brush:js">{
+```ts
+{
   "contact-name": ""
 }
-</pre>
+```
 
 Nếu bạn quen với camel case, chúng ta có thể sửa đổi chút để object của chúng ta có key nhìn quen thuộc hơn chẳng hạn.
 
-<pre class="brush:html">&lt;input class="form-control" type="text" ngModel name="contactName" ...&gt;</pre>
+```html
+<input class="form-control" type="text" ngModel name="contactName" ...>
+```
 
 Kết quả nhận được:
 
-<pre class="brush:js">{
+```ts
+{
   "contactName": ""
-}</pre>
+}
+```
 
 OK cool, giờ chúng ta có thể cài đặt tương tự cho các phần tử khác của form.
 
 Và khi bạn nhập giá trị cho các control thì Angular sẽ tự cập nhật cho các control của form tương ứng, chẳng hạn sau khi nhập xong và submit thì form sẽ có value như sau:
 
-<pre class="brush:js">{
+```ts
+{
   "contactName": "Tiep Phan",
   "email": "abc@deg.com",
   "facebook": "facebook.com",
   "twitter": "twitter.com",
   "website": "tiepphan.com",
   "tel": "1234-5678-90"
-}</pre>
+}
+```
 
 Bây giờ có một tình huống phát sinh là bạn cần bind data cho các control với một dữ liệu có sẵn, lúc này chúng ta sẽ dùng đến binding cho property, và property chúng ta nhắc đến ở đây chính là `ngModel`.
 
 Chúng ta có dạng binding quen thuộc như sau:
 
-<pre class="brush:html">[ngModel]="obj.prop"</pre>
+```html
+[ngModel]="obj.prop"
+```
 
 Giả sử object mà chúng ta có ở đây có dạng:
 
-<pre class="brush:js">contact = {
+```ts
+contact = {
   "contactName": "Tiep Phan",
   "email": "abc@deg.com",
   "facebook": "facebook.com",
   "twitter": "twitter.com",
   "website": "tiepphan.com",
   "tel": "1234-5678-90"
-}</pre>
+}
+```
 
 Template của chúng ta sẽ thay đổi như sau:
 
-<pre class="brush:html">&lt;input [ngModel]="contact.contactName" name="contactName" class="form-control" type="text" ...&gt;</pre>
+```html
+<input [ngModel]="contact.contactName" name="contactName" class="form-control" type="text" ...>
+```
 
 Mọi thứ đều bắt nguồn từ những điều cơ bản nhất, `[ngModel]` chính là one-way binding mà chúng ta vẫn thường dùng.
 
 Lưu ý rằng, khi bạn update form control, bản thân control được form quản lý sẽ thay đổi – `form.value`, nhưng object contact ở trên sẽ không hề hấn gì, vì chúng ta không hề đụng chạm gì tới nó, chúng ta chỉ binding một chiều, mà không binding ngược trở lại. Điều này dẫn đến chúng ta có thêm một dạng khác của `ngModel` đó là cú pháp two-way binding `[(ngModel)]`.
 
-<pre class="brush:html">&lt;input [(ngModel)]="contact.contactName" name="contactName" class="form-control" type="text" ...&gt;</pre>
+```html
+<input [(ngModel)]="contact.contactName" name="contactName" class="form-control" type="text" ...>
+```
 
 Như vậy, nếu bạn không cần binding thì chỉ cần thêm `ngModel` là đủ, nếu bạn muốn one-way binding thì sử dung `[ngModel]`, cuối cùng là muốn dùng two-way binding với `[(ngModel)]`. Mặc dù vậy, khi bạn thay đổi form control value, thì Angular sẽ cập nhật lại giá trị của các control của form mà nó đang quản lý.
 
@@ -216,40 +238,42 @@ Như vậy, nếu bạn không cần binding thì chỉ cần thêm `ngModel` l
 
 Giả sử như template kể trên, chúng ta sẽ nhóm các url thành một nhóm có tên là `social` chẳng hạn:
 
-<pre class="brush:html">&lt;fieldset ngModelGroup="social"&gt;
-  &lt;div class="form-group row"&gt;
-    &lt;label for="example-url-fb" class="col-md-2 col-form-label"&gt;
+```html
+<fieldset ngModelGroup="social">
+  <div class="form-group row">
+    <label for="example-url-fb" class="col-md-2 col-form-label">
       Facebook:
-    &lt;/label&gt;
-    &lt;div class="col-md-10"&gt;
-      &lt;input class="form-control" type="url" id="example-url-fb"
-        ngModel name="facebook"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="form-group row"&gt;
-    &lt;label for="example-url-twt" class="col-md-2 col-form-label"&gt;
+    </label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" id="example-url-fb"
+        ngModel name="facebook">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-url-twt" class="col-md-2 col-form-label">
       Twitter:
-    &lt;/label&gt;
-    &lt;div class="col-md-10"&gt;
-      &lt;input class="form-control" type="url" id="example-url-twt"
-        ngModel name="twitter"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;div class="form-group row"&gt;
-    &lt;label for="example-url-web" class="col-md-2 col-form-label"&gt;
+    </label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" id="example-url-twt"
+        ngModel name="twitter">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="example-url-web" class="col-md-2 col-form-label">
       Website:
-    &lt;/label&gt;
-    &lt;div class="col-md-10"&gt;
-      &lt;input class="form-control" type="url" id="example-url-web"
-        ngModel name="website"&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/fieldset&gt;
-</pre>
+    </label>
+    <div class="col-md-10">
+      <input class="form-control" type="url" id="example-url-web"
+        ngModel name="website">
+    </div>
+  </div>
+</fieldset>
+```
 
 Kết quả thu được chúng ta có form value với cấu trúc:
 
-<pre class="brush:js">{
+```ts
+{
   "contactName": "",
   "email": "",
   "social": {
@@ -259,7 +283,7 @@ Kết quả thu được chúng ta có form value với cấu trúc:
   },
   "tel": ""
 }
-</pre>
+```
 
 ## 5. Submit form
 
@@ -271,12 +295,13 @@ Giống như `submit`, event `ngSubmit` cũng thực hiện hành động khi 
 
 Giả sử, chúng ta thực hiện một tác vụ nào đó trong hàm listen form submit mà sinh ra exception, lúc này nếu bạn sử dụng `submit`, trang web của bạn sẽ reload, còn nếu bạn sử dụng `ngSubmit`, nó sẽ không reload – phiên bản lúc này tôi đang sử dụng.
 
-<pre class="brush:js">onSubmit(formValue) {
+```ts
+onSubmit(formValue) {
   // Do something awesome
   console.log(formValue);
   throw Error('something go wrong');
 }
-</pre>
+```
 
 Lời khuyên dành cho bạn là nên dùng `ngSubmit` cho việc listen form submit.
 
@@ -292,37 +317,46 @@ Chúng ta sẽ bỏ qua validation của HTML5, vậy nên ngay từ đầu form
 
 Giả sử chúng ta cần cài đặt contactName là required, chúng ta sẽ đặt như sau:
 
-<pre class="brush:html">&lt;input ngModel name="contactName" required class="form-control" type="text" ...&gt;</pre>
+```html
+<input ngModel name="contactName" required class="form-control" type="text" ...>
+```
 
 Và để dễ dàng quan sát, chúng ta sẽ thêm phần hiển thị lỗi như sau:
 
-<pre class="brush:html">&lt;p&gt;Form contactName errors:&lt;/p&gt;
-&lt;pre&gt;{{ form.controls.contactName?.errors | json }}&lt;/pre&gt;</pre>
+```html
+<p>Form contactName errors:</p>
+<pre>{{ form.controls.contactName?.errors | json }}</pre>
+```
 
 Chúng ta sử dụng **safe navigation operator** để truy cập property của một object có thể bị null/undefined mà không gây ra lỗi chương trình.
 
 Khi không nhập gì vào input contactName, chúng ta có thể thấy một thông báo lỗi như sau:
 
-<pre class="brush:js">{
+```ts
+{
   "required": true
-}</pre>
+}
+```
 
 Khi input này được nhập dữ liệu thì chúng ta sẽ thấy key required của object trên sẽ bị xóa bỏ.
 
 Công việc của chúng ta bây giờ là sử dụng `ngIf` chẳng hạn để show/hide error cho người dùng được biết.
 
-<pre class="brush:html">&lt;div class="col alert alert-danger" role="alert"
-  *ngIf="form.controls.contactName?.errors?.required"&gt;
+```html
+<div class="col alert alert-danger" role="alert"
+  *ngIf="form.controls.contactName?.errors?.required">
   Name is required!
-&lt;/div&gt;
-</pre>
+</div>
+```
 
 Và có thể thêm việc không cho người dùng nhấn button submit khi trạng thái của form là invalid như sau:
 
-<pre class="brush:html">&lt;button class="btn btn-primary" type="submit"
-  [disabled]="form.invalid"&gt;
+```html
+<button class="btn btn-primary" type="submit"
+  [disabled]="form.invalid">
   Submit
-&lt;/button&gt;</pre>
+</button>
+```
 
 Bây giờ, nếu bạn muốn chỉ hiển thị thông báo error khi người dùng đã focus vào input đó mà không nhập gì, lúc này chúng ta có thể thông qua trạng thái của form bằng cách truy cập các propeties như touched, dirty hay pristine, …
 
@@ -335,10 +369,12 @@ Trong đó:
 
 Chúng ta sẽ thay đổi một chút form validation:
 
-<pre class="brush:html">&lt;div class="col alert alert-danger" role="alert"
-  *ngIf="form.controls.contactName?.errors?.required && form.controls.contactName?.touched"&gt;
+```html
+<div class="col alert alert-danger" role="alert"
+  *ngIf="form.controls.contactName?.errors?.required && form.controls.contactName?.touched">
   Name is required!
-&lt;/div&gt;</pre>
+</div>
+```
 
 OK cool, giờ đây chỉ khi nào người dùng touched vào control và có error thì validation message sẽ hiển thị.
 
@@ -346,14 +382,18 @@ OK cool, giờ đây chỉ khi nào người dùng touched vào control và có 
 > 
 > &#8211; Câu trả lời là có, chúng ta hoàn toàn có thể dùng template variable như sau:
 
-<pre class="brush:html">&lt;input ngModel name="contactName" required #contactName="ngModel" class="form-control" type="text" ...&gt;</pre>
+```html
+<input ngModel name="contactName" required #contactName="ngModel" class="form-control" type="text" ...>
+```
 
 Và sử dụng như một template variable thông thường:
 
-<pre class="brush:html">&lt;div class="col alert alert-danger" role="alert"
-  *ngIf="contactName?.errors?.required && contactName?.touched"&gt;
+```html
+<div class="col alert alert-danger" role="alert"
+  *ngIf="contactName?.errors?.required && contactName?.touched">
   Name is required!
-&lt;/div&gt;</pre>
+</div>
+```
 
 Như vậy, việc sử dụng Template-driven form trong Angular khá dễ dàng, trong phần này chúng ta chưa đề cập đến custom validation cho form control. Thay vào đó chúng ta sẽ có một phần riêng để thảo luận về tính năng này.
 
@@ -363,8 +403,8 @@ Như vậy, việc sử dụng Template-driven form trong Angular khá dễ dàn
 
 ## 8. Tham khảo
 
-Supported Validators: <a href="https://angular.io/docs/ts/latest/api/#!?query=validator&type=directive" target="_blank" rel="noopener noreferrer">https://angular.io/docs/ts/latest/api/#!?query=validator&type=directive</a>
+Supported Validators: [https://angular.io/docs/ts/latest/api/#!?query=validator&type=directive](https://angular.io/docs/ts/latest/api/#!?query=validator&type=directive)
 
-Forms documentation: <a href="https://angular.io/docs/ts/latest/guide/forms.html" target="_blank" rel="noopener noreferrer">https://angular.io/docs/ts/latest/guide/forms.html</a>
+Forms documentation: [https://angular.io/docs/ts/latest/guide/forms.html](https://angular.io/docs/ts/latest/guide/forms.html)
 
-Git repo: <a href="https://github.com/tieppt/try-angular/tree/lesson-17" target="_blank" rel="noopener noreferrer">https://github.com/tieppt/try-angular/tree/lesson-17</a>
+Git repo: [https://github.com/tieppt/try-angular/tree/lesson-17](https://github.com/tieppt/try-angular/tree/lesson-17)
