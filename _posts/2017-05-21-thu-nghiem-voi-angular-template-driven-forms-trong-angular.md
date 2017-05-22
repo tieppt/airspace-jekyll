@@ -127,7 +127,7 @@ Giờ đây chúng ta có thể sử dụng form value cho việc submit form ch
 </form>
  
 <p>Form value:</p>
-<pre>\{\{ form.value | json \}\}</pre>
+<pre>\{{ form.value | json }}</pre>
 ```
 
 Và để dễ dàng trong quá trình development, chúng ta có thể thêm một phần hiển thị ở template để biết được form value đang có gì như hai dòng code cuối ở trên.
@@ -325,7 +325,7 @@ Và để dễ dàng quan sát, chúng ta sẽ thêm phần hiển thị lỗi n
 
 ```html
 <p>Form contactName errors:</p>
-<pre>\{\{ form.controls.contactName?.errors | json \}\}</pre>
+<pre>{{ form.controls.contactName?.errors | json }}</pre>
 ```
 
 Chúng ta sử dụng **safe navigation operator** để truy cập property của một object có thể bị null/undefined mà không gây ra lỗi chương trình.
