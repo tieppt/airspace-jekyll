@@ -565,7 +565,9 @@ Ngoài ra, DI trong Angular còn một số kiến thức về Controlling Visib
 
 ## 8. Video bài học {#tp-di-di-video}
 
-
+<figure class="video_container">
+  <iframe src="https://www.youtube.com/embed/bKadxkJJg4U" frameborder="0" allowfullscreen="true"> </iframe>
+</figure>
 
 ## 9. Tham khảo {#tp-di-di-references}
 
