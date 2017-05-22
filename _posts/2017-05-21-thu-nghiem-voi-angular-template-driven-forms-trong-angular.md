@@ -7,7 +7,7 @@ layout: post
 guid: http://www.tiepphan.com/?p=437
 permalink: /thu-nghiem-voi-angular-template-driven-forms-trong-angular/
 description: 'Template-driven forms là phương pháp mà chúng ta sẽ tạo forms dựa vào template. Chúng ta thực hiện việc thêm các directives và hành vi vào template.'
-image: /wp-content/uploads/2017/05/angular-p17.jpg
+image: /assets/uploads/2017/05/angular-p17.jpg
 categories:
   - Javascript
   - Lập Trình Angular
@@ -84,7 +84,7 @@ Giả sử chúng ta có template form như sau:
 
 Trên đây chỉ là một form HTML thông thường, khi browser render chúng ta sẽ có form trông giống như sau:
 
-![Contact App Form](/wp-content/uploads/2017/05/ContactAppForm.png){:class="img-responsive"}
+![Contact App Form](/assets/uploads/2017/05/ContactAppForm.png){:class="img-responsive"}
 
 ## 2. Import APIs cho Template-driven forms
 
