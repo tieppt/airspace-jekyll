@@ -28,6 +28,10 @@ logo: "/assets/logo.png"
 # Build settings
 markdown: kramdown
 
+kramdown:
+  input: GFM
+  hard_wrap: false
+
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
 
