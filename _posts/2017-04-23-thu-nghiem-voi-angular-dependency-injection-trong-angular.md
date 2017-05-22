@@ -6,8 +6,7 @@ author: Tiep Phan
 layout: post
 guid: http://www.tiepphan.com/?p=401
 permalink: /thu-nghiem-voi-angular-dependency-injection-trong-angular/
-beans_layout:
-  - default_fallback
+description: 'Bài viết này sẽ giới thiệu về Dependency Injection trong Angular – một trong những tính năng quan trọng của Angular – cho đến thời điểm hiện tại chỉ có Angular là framework duy nhất phía client cung cấp DI.'
 image: /assets/uploads/2017/04/angular-16-Dependency-Injection.jpg
 categories:
   - Javascript
