@@ -15,6 +15,7 @@ keep_files:
 gems:
   - jekyll-sitemap
   - jekyll-seo-tag
+  - jekyll-archives
 
 # Site settings
 title: "Lập Trình Thật Kỳ Diệu"
@@ -31,6 +32,9 @@ markdown: kramdown
 kramdown:
   input: GFM
   hard_wrap: false
+
+# Pagination
+paginate: 1
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
