@@ -39,7 +39,12 @@ kramdown:
 # Archives
 jekyll-archives:
   enabled: all
-  layout: 'page'
+  layout:
+    year: year
+    month: month
+    day: day
+    tag: tagx
+    category: tagx
   permalinks:
     year: '/:year/'
     month: '/:year/:month/'
