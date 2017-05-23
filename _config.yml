@@ -34,7 +34,18 @@ kramdown:
   hard_wrap: false
 
 # Pagination
-paginate: 1
+# paginate: 1
+
+# Archives
+jekyll-archives:
+  enabled: all
+  layout: 'page'
+  permalinks:
+    year: '/:year/'
+    month: '/:year/:month/'
+    day: '/:year/:month/:day/'
+    tag: '/tag/:name/'
+    category: '/category/:name/'
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
