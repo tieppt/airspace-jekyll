@@ -39,7 +39,7 @@ kramdown:
 # Archives
 jekyll-archives:
   enabled: all
-  layout:
+  layouts:
     year: year
     month: month
     day: day
