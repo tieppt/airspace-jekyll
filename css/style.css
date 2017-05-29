@@ -9,6 +9,11 @@
   color: #fff;
 }
 
+.navbar-brand .img-logo {
+  max-width: 40px;
+  display: inline-block;
+}
+
 .italic {
   font-style: italic;
 }

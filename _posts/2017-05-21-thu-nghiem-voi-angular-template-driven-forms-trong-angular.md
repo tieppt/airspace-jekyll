@@ -408,8 +408,8 @@ Như vậy, việc sử dụng Template-driven form trong Angular khá dễ dàn
 
 ## 8. Tham khảo
 
-Supported Validators: [https://angular.io/docs/ts/latest/api/#!?query=validator&type=directive](https://angular.io/docs/ts/latest/api/#!?query=validator&type=directive)
+Supported Validators: <a href="https://angular.io/docs/ts/latest/api/#!?query=validator&type=directive" target="_blank">https://angular.io/docs/ts/latest/api/#!?query=validator&type=directive</a>
 
-Forms documentation: [https://angular.io/docs/ts/latest/guide/forms.html](https://angular.io/docs/ts/latest/guide/forms.html)
+Forms documentation: <a href="https://angular.io/docs/ts/latest/guide/forms.html" target="_blank">https://angular.io/docs/ts/latest/guide/forms.html</a>
 
-Git repo: [https://github.com/tieppt/try-angular/tree/lesson-17](https://github.com/tieppt/try-angular/tree/lesson-17)
+Git repo: <a href="https://github.com/tieppt/try-angular/tree/lesson-17" target="_blank">https://github.com/tieppt/try-angular/tree/lesson-17</a>
