@@ -274,6 +274,16 @@ contactName: new FormControl('',
 </div>
 ```
 
+Hoặc sử dụng <a href="https://github.com/angular/angular/blob/4.1.x/packages/forms/src/model.ts#L488" target="_blank">`hasError`</a>:
+
+```html
+<div class="col alert alert-danger" role="alert"
+  *ngIf="rfContact.controls.contactName?.hasError('required')
+         && rfContact.controls.contactName?.touched">
+  Name is required!
+</div>
+```
+
 Không những thế, Reactive form còn cho phép chúng ta lấy ra một control theo path đến nó một cách dễ dàng, ví dụ để lấy về `contactName`:
 
 ```ts
@@ -284,6 +294,8 @@ Hoặc với control `facebook`:
 
 ```ts
 rfContact.get('social.facebook')
+// or
+rfContact.get(['social'], ['facebook'])
 ```
 
 Với phương pháp này chúng ta không cần tạo nhiều template variable nữa.
