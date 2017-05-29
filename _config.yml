@@ -42,6 +42,14 @@ webmaster_verifications:
   bing:
   alexa:
   yandex:
+  
+# Social
+social:
+  name: Tiep Phan
+  links:
+    - https://twitter.com/_tieppt
+    - https://www.facebook.com/pttiep
+    - https://github.com/tieppt
 
 # Archives
 jekyll-archives:
