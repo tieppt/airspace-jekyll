@@ -20,10 +20,10 @@ gems:
 # Site settings
 title: "Lập Trình Thật Kỳ Diệu"
 subtitle: "Tiep Phan Blog"
-url: "https://tieppt.github.io" # the base hostname & protocol for your site
+url: "http://www.tiepphan.com" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""
-cover: "/assets/cover.png"
+cover: "/assets/logo.png"
 logo: "/assets/logo.png"
 
 # Build settings
