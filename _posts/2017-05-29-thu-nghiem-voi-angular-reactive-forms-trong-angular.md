@@ -295,7 +295,7 @@ Hoặc với control `facebook`:
 ```ts
 rfContact.get('social.facebook')
 // or
-rfContact.get(['social'], ['facebook'])
+rfContact.get(['social', 'facebook'])
 ```
 
 Với phương pháp này chúng ta không cần tạo nhiều template variable nữa.

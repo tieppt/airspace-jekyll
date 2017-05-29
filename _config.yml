@@ -36,6 +36,21 @@ kramdown:
 # Pagination
 # paginate: 1
 
+# Webmaster tools
+webmaster_verifications:
+  google: Gcn3Y0oBud7gufI1PtszF7DFNgFOifgLRIaZAoLZWWU
+  bing:
+  alexa:
+  yandex:
+  
+# Social
+social:
+  name: Tiep Phan
+  links:
+    - https://twitter.com/_tieppt
+    - https://www.facebook.com/pttiep
+    - https://github.com/tieppt
+
 # Archives
 jekyll-archives:
   enabled: all
