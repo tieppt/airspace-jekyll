@@ -98,7 +98,9 @@ All Angular Pipes: <a href="https://angular.io/docs/ts/latest/api/#!?query=pipe
 > 
 > Nếu bạn sử dụng `Date` và `Currency` pipes thì bạn cần phải có thêm polyfill để support trên các trình duyệt cũ, bằng việc thêm đoạn script sau vào file _index.html_
 > 
-> <pre class="brush:html">&lt;script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"&gt;&lt;/script&gt;</pre>
+> ```html
+> <script src="https://cdn.polyfill.io/v2/polyfill.min.js?features=Intl.~locale.en"></script>
+> ```
 > 
 > Hoặc nếu bạn sử dụng Angular CLI thì chạy lệnh cài đặt `npm install --save intl` và uncomment dòng sau trong file polyfill.ts
 > 
@@ -114,8 +116,8 @@ Ví dự sử dụng Pipe `lowercase` và `uppercase`: (sử dụng không có t
   selector: 'lowerupper-pipe',
   template: `<div>
     <label>Name: </label><input #name (keyup)="change(name.value)" type="text">
-    <p>In lowercase: <pre>'{{value | lowercase}}'</pre>
-    <p>In uppercase: <pre>'{{value | uppercase}}'</pre>
+    <p>In lowercase: {{value | lowercase}}</p>
+    <p>In uppercase: {{value | uppercase}}</p>
   </div>`
 })
 export class LowerUpperPipeComponent {
