@@ -33,6 +33,7 @@ Trong bài học trước, chúng ta đã &#8220;<a href="http://www.tiepphan.co
 
 Với phiên bản code từ bài học trước liệu rằng khi chúng ta làm việc với dữ liệu async thì app của chúng ta sẽ chạy đúng. Lúc này, chúng ta gặp phải một vấn đề đó là mặc dù chúng ta đã để `[multiple]="false"` nhưng app lại chạy không như chúng ta mong muốn.
 
+{% raw %}
 ```html
 <tp-collapse-group [multiple]="false">
   <tp-collapse
@@ -43,6 +44,7 @@ Với phiên bản code từ bài học trước liệu rằng khi chúng ta l�
   </tp-collapse>
 </tp-collapse-group>
 ```
+{% endraw %}
 
 ```ts
 import { Component, OnInit } from '@angular/core';
@@ -55,7 +57,7 @@ import { POSTS } from './services/post';
 export class AppComponent implements OnInit {
   posts: any[] = [];
   ngOnInit() {
-    setTimeout(() =&gt; {
+    setTimeout(() => {
       this.posts = POSTS.slice();
     }, 500);
   }
