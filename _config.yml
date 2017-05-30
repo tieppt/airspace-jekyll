@@ -52,12 +52,9 @@ social:
     - https://github.com/tieppt
 
 pagination:
-  
-  # Site-wide kill switch, disabled here it doesn't run at all 
   enabled: true
-
-  # How many objects per paginated page, used to be `paginate` (default: 0, means all)
   per_page: 5
+  collection: 'posts'
 
 # Archives
 jekyll-archives:
